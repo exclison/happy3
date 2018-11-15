@@ -475,7 +475,7 @@ window.onload = function () {
             var barHeight = spaceHeight * 0.8;
 
                 for (var i = 0; i < strArr.length; i++) {
-                    var randomY = parseInt(Math.random() * barHeight);
+                    var randomY = parseInt(Math.random() * barHeight)+180;
                     var animateSpeed = parseInt(Math.random() * 20000) + 5000;
                     var pcolor1 = parseInt(Math.random() * 130) + 125;
                     var pcolor2 = parseInt(Math.random() * 130) + 125;
@@ -534,7 +534,7 @@ window.onload = function () {
     }
 
     bodyHeight = document.body.scrollHeight;
-    console.log(bodyHeight);
+//     console.log(bodyHeight);
     // document.body.style.height = bodyHeight + 'px';
 
     (function ($) {
