@@ -471,7 +471,13 @@ window.onload = function () {
 
         /*弹幕函数*/
         function barrage() {
-            var spaceHeight = document.body.scrollHeight;
+           var spaceHeight;
+            if(spaceWidth < 768){
+                spaceHeight = document.body.scrollHeight + 600;
+            }else {
+                spaceHeight = document.body.scrollHeight;
+            }
+            
             var barHeight = spaceHeight * 0.8;
 
                 for (var i = 0; i < strArr.length; i++) {
@@ -549,7 +555,14 @@ window.onload = function () {
                     flakeColor: "#FFFFFF"	//懒人建站 www.51xuediannao.com   整理
                 },
                 options = $.extend({}, defaults, options);
+            
+             if(spaceWidth < 768){
+                documentHeight = bodyHeight + 600;
+            }else {
                 documentHeight = bodyHeight; //$(document.body).height()
+            }
+            
+               
                 documentWidth = spaceWidth; //$(document.body).width()
 
             var interval = setInterval(function () {
